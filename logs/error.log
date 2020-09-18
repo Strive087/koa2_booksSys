@@ -1,0 +1,18 @@
+[2020-09-15T17:39:06.361] [ERROR] error - ReferenceError: ctx1 is not defined
+    at _callee$ (/Users/zhuduanlei/code/nodejs/koa2_booksSys/controllers/IndexController.js:29:5)
+    at tryCatch (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/regenerator-runtime/runtime.js:293:22)
+    at Generator.next (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/regenerator-runtime/runtime.js:118:21)
+    at asyncGeneratorStep (/Users/zhuduanlei/code/nodejs/koa2_booksSys/controllers/IndexController.js:16:103)
+    at _next (/Users/zhuduanlei/code/nodejs/koa2_booksSys/controllers/IndexController.js:18:194)
+[2020-09-15T20:18:34.559] [ERROR] error - TypeError: booksModel.getBooksDataList is not a function
+    at actionIndex (/Users/zhuduanlei/code/nodejs/koa2_booksSys/controllers/IndexController.js:28:16)
+    at dispatch (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/koa-compose/index.js:42:32)
+    at /Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/@koa/router/lib/router.js:372:16
+    at dispatch (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/koa-compose/index.js:42:32)
+    at /Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/@koa/router/lib/router.js:377:31)
+    at next (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/koa-compose/index.js:42:32)
+    at _callee$ (/Users/zhuduanlei/code/nodejs/koa2_booksSys/middlewares/index.js:4:13)
+    at tryCatch (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/regenerator-runtime/runtime.js:63:40)
+    at Generator.invoke [as _invoke] (/Users/zhuduanlei/code/nodejs/koa2_booksSys/node_modules/regenerator-runtime/runtime.js:293:22)
