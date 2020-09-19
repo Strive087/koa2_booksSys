@@ -8,6 +8,7 @@ const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const afterHtmlPlugin = require('./build/afterHtmlPlugin');
 
 console.log('当前打包环境', mode);
 
@@ -28,6 +29,7 @@ files.forEach((url) => {
         filename: `../web/views/${pagesName}/page/${actionName}.html`,
         template: `./src/web/views/${pagesName}/page/${actionName}.html`,
         chunks: ['runtime', entryKey],
+        inject: false,
       })
     );
   }
@@ -67,6 +69,7 @@ const baseConfig = {
         },
       ],
     }),
+    new afterHtmlPlugin(),
   ],
 };
 

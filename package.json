@@ -11,7 +11,8 @@
     "server:start": "scripty",
     "jscpd": "jscpd ./demos/test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=dev nodemon --exec 'babel-node ./src/server/app.js' "
+    "start": "NODE_ENV=dev nodemon --exec 'babel-node ./src/server/app.js' ",
+    "start-test": "NODE_ENV=dev nodemon --exec 'babel-node ./src/server/app.js' "
   },
   "keywords": [],
   "author": "",
