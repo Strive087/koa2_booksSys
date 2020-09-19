@@ -24,7 +24,7 @@ class IndexController extends Controller {
   async actionIndex(ctx) {
     // throw new Error('自定义错误')
     const result = await BooksModel.getBooksDataList();
-    ctx.body = await ctx.render('index', {
+    ctx.body = await ctx.render('books/page/list', {
       message: result.message,
       books: result.data,
     });

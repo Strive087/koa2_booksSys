@@ -1,0 +1,21 @@
+{% extends '../../layout/index.html' %}
+
+{% block title %}图书列表{% endblock %}
+
+{% block head %}
+<!-- css -->
+{% endblock %}
+
+{% block content %}
+<ul>
+  {% for book in books %}
+  <li>[[ book.id ]] [[ book.name ]] [[ book.price ]] [[ book.count ]]</li>
+  {% endfor %}
+</ul>
+<input type="button" value="click">
+<script src="/js/index.js"></script>
+{% endblock %}
+
+{% block scripe %}
+<!-- script -->
+{% endblock %}

@@ -4,8 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "client:dev": "scripty",
+    "client:prod": "scripty",
+    "server:dev": "scripty",
+    "server:prod": "scripty",
+    "server:start": "scripty",
+    "jscpd": "jscpd ./demos/test.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=dev nodemon --exec 'babel-node ./app.js' "
+    "start": "NODE_ENV=dev nodemon --exec 'babel-node ./src/server/app.js' "
   },
   "keywords": [],
   "author": "",
@@ -21,13 +27,23 @@
     "@babel/preset-env": "^7.11.5",
     "@koa/router": "^9.4.0",
     "axios": "^0.20.0",
+    "babel-loader": "^8.1.0",
     "co": "^4.6.0",
+    "copy-webpack-plugin": "^6.1.1",
     "core-js": "^3.6.5",
+    "css-loader": "^4.3.0",
+    "glob": "^7.1.6",
+    "html-webpack-plugin": "^4.4.1",
+    "jscpd": "^3.3.19",
     "koa2-connect-history-api-fallback": "^0.1.2",
     "log4js": "^6.3.0",
+    "mini-css-extract-plugin": "^0.11.2",
     "puppeteer": "^5.2.1",
     "rize": "^0.9.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "scripty": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4",
+    "yargs": "^16.0.3"
   }
 }

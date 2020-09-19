@@ -14,7 +14,7 @@ function initController(app) {
     ctx.body = 'home';
   });
 
-  router.get('/books', indexController.actionIndex);
+  router.get('/books/list', indexController.actionIndex);
 
   router.get('/api/getDataList', apiController.actionDataList);
 
