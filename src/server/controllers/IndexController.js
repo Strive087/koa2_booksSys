@@ -29,6 +29,10 @@ class IndexController extends Controller {
       books: result.data,
     });
   }
+
+  async actionCreate(ctx) {
+    ctx.body = await ctx.render('books/page/create');
+  }
 }
 
 export default IndexController;

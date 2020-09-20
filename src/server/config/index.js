@@ -21,4 +21,8 @@ if (process.env.NODE_ENV === 'prod') {
   config = { ...config, ...devConfig };
 }
 
+if (false) {
+  //sdfsdafs
+}
+
 module.exports = config;

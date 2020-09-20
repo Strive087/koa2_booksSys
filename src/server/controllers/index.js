@@ -11,12 +11,14 @@ const apiController = new ApiController();
 
 function initController(app) {
   router.get('/', (ctx) => {
-    ctx.body = 'home';
+    ctx.body = 'hha';
   });
 
   router.get('/books/list', indexController.actionIndex);
 
   router.get('/api/getDataList', apiController.actionDataList);
+
+  router.get('/books/create', indexController.actionCreate);
 
   app.use(router.routes());
 }

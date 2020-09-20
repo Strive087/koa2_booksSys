@@ -1,14 +1,13 @@
 const { argv } = require('yargs');
 const path = require('path');
 const merge = require('webpack-merge').default;
-const config = require('./src/server/config');
 const mode = argv.mode;
 const envConfig = require(`./build/webpack.${mode}.js`);
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
 const afterHtmlPlugin = require('./build/afterHtmlPlugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 console.log('当前打包环境', mode);
 
@@ -26,7 +25,7 @@ files.forEach((url) => {
 
     htmlPlugins.push(
       new HtmlWebpackPlugin({
-        filename: `../web/views/${pagesName}/page/${actionName}.html`,
+        filename: `../views/${pagesName}/page/${actionName}.html`,
         template: `./src/web/views/${pagesName}/page/${actionName}.html`,
         chunks: ['runtime', entryKey],
         inject: false,
@@ -39,8 +38,8 @@ const baseConfig = {
   mode,
   entry: entrys,
   output: {
-    path: path.join(__dirname, './dist/assets'),
-    filename: '[name].bundle.js',
+    path: path.join(__dirname, './dist/web/assets'),
+    filename: '[name].[hash:5].js',
   },
   module: {
     rules: [
@@ -57,19 +56,8 @@ const baseConfig = {
   plugins: [
     ...htmlPlugins,
     new MiniCssExtractPlugin(),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.join(__dirname, './src/web/views/layout'),
-          to: '../web/views/layout',
-        },
-        {
-          from: path.join(__dirname, './src/web/components'),
-          to: '../web/components',
-        },
-      ],
-    }),
     new afterHtmlPlugin(),
+    new CleanWebpackPlugin(),
   ],
 };
 
