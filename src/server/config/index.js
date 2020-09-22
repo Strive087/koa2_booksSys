@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'dev') {
 
 if (process.env.NODE_ENV === 'prod') {
   const devConfig = {
-    port: 80,
+    port: 3000,
     cache: 'memory',
   };
   config = { ...config, ...devConfig };
