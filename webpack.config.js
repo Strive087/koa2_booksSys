@@ -6,7 +6,7 @@ const envConfig = require(`./build/webpack.${mode}.js`);
 const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const afterHtmlPlugin = require('./build/afterHtmlPlugin');
+// const afterHtmlPlugin = require('./build/afterHtmlPlugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 console.log('当前打包环境', mode);
@@ -56,7 +56,7 @@ const baseConfig = {
   plugins: [
     ...htmlPlugins,
     new MiniCssExtractPlugin(),
-    new afterHtmlPlugin(),
+    // new afterHtmlPlugin(),
     new CleanWebpackPlugin(),
   ],
 };
