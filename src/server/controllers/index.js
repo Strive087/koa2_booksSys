@@ -1,9 +1,6 @@
 import Router from '@koa/router';
 import IndexController from './IndexController';
 import ApiController from './ApiController';
-// const Router = require('@koa/router');
-// const IndexController = require('./IndexController');
-// const ApiController = require('./ApiController');
 
 const router = new Router();
 const indexController = new IndexController();

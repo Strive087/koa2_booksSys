@@ -1,7 +1,5 @@
 import Controller from './Controller';
 import BooksModel from '../models/BooksModel';
-// const Controller = require("./Controller");
-// const BooksModel = require('../models/BooksModel');
 
 class IndexController extends Controller {
   constructor() {

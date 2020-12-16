@@ -1,5 +1,4 @@
 import safeRequest from '../utils/safeRequest';
-// const axios = require('axios').default;
 
 class BooksModel {
   // getBooksDataList() {

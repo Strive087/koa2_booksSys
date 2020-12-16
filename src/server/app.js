@@ -7,15 +7,7 @@ import serve from 'koa-static';
 import { errorHandler } from './middlewares';
 import { historyApiFallback } from 'koa2-connect-history-api-fallback';
 import log4js from 'log4js';
-// const Koa = require('koa');
-// const render = require('koa-swig');
-// const config = require('./config');
-// const initController = require('./controllers');
-// const co = require('co');
-// const serve = require('koa-static');
-// const errorHandler = require('./middlewares');
-// const { historyApiFallback } = require('koa2-connect-history-api-fallback');
-// const log4js = require('log4js');
+
 log4js.configure({
   appenders: { error: { type: 'file', filename: './logs/error.log' } },
   categories: { default: { appenders: ['error'], level: 'error' } },

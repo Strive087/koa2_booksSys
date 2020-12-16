@@ -14,15 +14,15 @@ if (process.env.NODE_ENV === 'dev') {
 }
 
 if (process.env.NODE_ENV === 'prod') {
-  const devConfig = {
+  const prodConfig = {
     port: 3000,
     cache: 'memory',
   };
-  config = { ...config, ...devConfig };
+  config = { ...config, ...prodConfig };
 }
 
 if (false) {
-  //sdfsdafs
+  //
 }
 
 module.exports = config;

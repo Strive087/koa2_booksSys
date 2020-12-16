@@ -1,5 +1,4 @@
 import Controller from './Controller';
-// const Controller = require("./Controller");
 
 class ApiController extends Controller {
   constructor() {
